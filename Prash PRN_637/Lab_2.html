@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <title>Lab Work 2 Resume/CV</title>
 
     <style>
@@ -56,7 +57,7 @@
             margin-bottom: 10px;
         }
 
-        .content h3 {
+        .content h4 {
             margin-bottom: 4px;
         }
 
@@ -71,8 +72,26 @@
 
         h2 {
             border-bottom: 1px solid #4a4949;
-            padding-bottom: 15px;
+            /* padding-bottom: 15px; */
             margin-bottom: 10px;
+        }
+
+        .flex {
+            display: flex;
+
+        }
+
+        aside {
+            text-align: start;
+            padding: 6px;
+        }
+        .right_side {
+            display: flex;
+            flex-direction: column;
+
+        }
+        .right_side p {
+            margin-bottom: 12px;
         }
     </style>
 </head>
@@ -83,83 +102,108 @@
             <h1>PRASHANT SHARMA</h2>
                 <ul id="head_nav">
                     <li>Pune, Maharashtra</li>
-                    <li>geovera9@outlook.com</li>
+                    <li>geovera9@instagram.com</li>
                     <li>+91-9090909090</li>
                 </ul>
         </header>
-
-        <div class="content">
-            <h2>PROFESSIONAL EXPERIENCE</h2>
-            <div>
-                <h3>SOFTWARE DEVELOPER</h3>
-                <p>at MICROSOFT</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore atque iusto
-                    natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis, quibusdam
-                    ut
-                    laborum?
-                </p>
-            </div>
-            <div>
-                <h3>SECURITY ENGINEER</h3>
-                <p>at APPLE</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore atque iusto
-                    natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis, quibusdam
-                    ut
-                    laborum?
-                </p>
-            </div>
-            <div>
-                <h3>FREELANCE DEVELOPER</h3>
-                <p>at URBANMONKEY</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore atque iusto
-                    natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis, quibusdam
-                    ut
-                    laborum?
-                </p>
-            </div>
-        </div>
-        <div class="content">
-            <h2>EDUCATION</h2>
-            <div>
-                <div class="space-btw">
-                    <h4>DYPIU</h4>
-                    <p>Pimpri, Pune</p>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore atque iusto
-                    natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis, quibusdam
-                    ut
-                    laborum?
-                </p>
-            </div>
-            <div>
-                <div>
-                    <div class="space-btw">
-                        <h4>St. Ramanand School</h3>
-                            <p>Pimpri, Pune</p>
+        <div class="flex">
+            <aside>
+                <div class="content">
+                    <h2>PROFESSIONAL EXPERIENCE</h2>
+                    <div>
+                        <h4>SOFTWARE DEVELOPER</h4>
+                        <p>at MICROSOFT</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
+                            atque
+                            iusto
+                            natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis,
+                            quibusdam
+                            ut
+                            laborum?
+                        </p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore atque
-                        iusto
-                        natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis,
-                        quibusdam
-                        ut
-                        laborum?
+                    <div>
+                        <h4>SECURITY ENGINEER</h4>
+                        <p>at APPLE</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
+                            atque
+                            iusto
+                            natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis,
+                            quibusdam
+                            ut
+                            laborum?
+                        </p>
+                    </div>
+                    <div>
+                        <h4>FREELANCE DEVELOPER</h4>
+                        <p>at URBANMONKEY</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
+                            atque
+                            iusto
+                            natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis,
+                            quibusdam
+                            ut
+                            laborum?
+                        </p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h2>EDUCATION</h2>
+                    <div>
+                        <div class="space-btw">
+                            <h4>DYPIU</h4>
+                            <p>Akurdi, Pune</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
+                            atque
+                            iusto
+                            natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis,
+                            quibusdam
+                            ut
+                            laborum?
+                        </p>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="space-btw">
+                                <h4>ST. RAMANAND SCHOOL</h4>
+                                <p>Pimpri, Pune</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
+                                atque
+                                iusto
+                                natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis,
+                                quibusdam
+                                ut
+                                laborum?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h2>Skilss</h2>
+                    <div>
+                        <div class="space-btw">
+                            <p class="bg-gray-100">Communication, Critical Thinking, Problem-solving, Teamwork, Adaptability, Emotional Intelligence</h4>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <aside class="right_side">
+                <h2>PROJECTS</h2>
+                <div>
+                    <h4>SURAKSHA COUCH</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aliquid itaque et
                     </p>
                 </div>
-            </div>
-        </div>
-        <div class="content">
-            <h2>Skilss</h2>
-            <div>
-                <div class="space-btw">
-                    <h4>DYPIU</h4>
-                    <p>Pimpri, Pune</p>
+                <div>
+                    <h4>AI BASED TRAFFIC ANALYZER</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aliquid itaque et
+                    </p>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore atque iusto
-                    natus nulla numquam laudantium est expedita, dolor sed. Voluptatem placeat nemo facilis, quibusdam
-                    ut
-                    laborum?
-                </p>
-            </div>
+            </aside>
         </div>
     </section>
 </body>
