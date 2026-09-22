@@ -6,102 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <title>Lab Work 2 Resume/CV</title>
-
-    <style>
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgb(229, 230, 219);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        section {
-            display: grid;
-            justify-content: center;
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            border: 2px solid #333;
-            padding: 20px;
-            background: #fff;
-        }
-
-        header {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-
-        #head_nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-        }
-
-        #head_nav li {
-            padding: 8px 12px;
-        }
-
-        .content {
-            text-align: left;
-            border-bottom: 1px solid #4a4949;
-            margin-bottom: 10px;
-        }
-
-        .content h4 {
-            margin-bottom: 4px;
-        }
-
-        .content p {
-            margin-bottom: 12px;
-        }
-
-        .space-btw {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        h2 {
-            border-bottom: 1px solid #4a4949;
-            /* padding-bottom: 15px; */
-            margin-bottom: 10px;
-        }
-
-        .flex {
-            display: flex;
-
-        }
-
-        aside {
-            text-align: start;
-            padding: 6px;
-        }
-
-        .right_side {
-            display: flex;
-            flex-direction: column;
-
-        }
-
-        .right_side p {
-            margin-bottom: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <section>
         <header>
-            <h1>PRASHANT SHARMA</h2>
+                <h1>PRASHANT SHARMA</h2>
                 <ul id="head_nav">
                     <li>Pune, Maharashtra</li>
                     <li>geovera9@instagram.com</li>
@@ -114,7 +25,7 @@
                     <h2>PROFESSIONAL EXPERIENCE</h2>
                     <div>
                         <h4>SOFTWARE DEVELOPER</h4>
-                        <p>at aMICROSOFT</p>
+                        <p>at MICROSOFT</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
                             atque
                             iusto
@@ -126,7 +37,7 @@
                     </div>
                     <div>
                         <h4>SECURITY ENGINEER</h4>
-                        <p>at aAPPLE</p>
+                        <p>at APPLE</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
                             atque
                             iusto
@@ -137,8 +48,8 @@
                         </p>
                     </div>
                     <div>
-                        <h4>FREELANCE DEVELOPER</h4>
-                        <p>at aURBANMONKEY</p>
+                        <h4 class="text-24">FREELANCE DEVELOPER</h4>
+                        <p>at URBANMONKEY</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
                             atque
                             iusto
@@ -154,9 +65,10 @@
                     <div>
                         <div class="space-btw">
                             <h4>DYPIU</h4>
-                            <div>
-                                <p>Akurdi, Pune</p>
-                                <!-- <p>2026-Present</p> -->
+                            <div class="flex">
+                                <p >Akurdi, Pune</p>
+                                <p class="space-x">-</p>
+                                <p>2026-Present</p>
                             </div>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
@@ -172,9 +84,10 @@
                         <div>
                             <div class="space-btw">
                                 <h4>ST. RAMANAND SCHOOL</h4>
-                                <div>
-                                    <p>Pimpri, Pune</p>
-                                    <!-- <p>2012-2024</p> -->
+                                <div class="flex">
+                                    <p >Pimpri, Pune</p>
+                                    <p class="space-x">-</p>
+                                    <p>2012-2024</p>
                                 </div>
                             </div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi ad sunt, labore
@@ -189,12 +102,16 @@
                     </div>
                 </div>
                 <div class="content">
-                    <h2>Skilss</h2>
+                    <h2>Skills</h2>
                     <div>
-                        <div class="space-btw">
-                            <p class="bg-gray-100">Communication, Critical Thinking, Problem-solving, Teamwork,
-                                Adaptability, Emotional Intelligence</h4>
-                        </div>
+                        <ul>
+                            <li><b>Languages: </b>MERN Stack, Nextjs, Python, Rust</li>
+                            <li><b>Dev Tools: </b>Git, Github, GitLab, Postman, Vercel</li>
+                            <li><b>Cloud & Devops: </b>Google Cloud, Azure, Oracle</li>
+                            <li><b>Ai & Vibe Coding: </b>Hermes Agent, Claude, Antigravity</li>
+                            <li><b>Kernel: </b>Arch, Kali, Ubuntu</li>
+                            <li><b>Soft Skills: </b>Communications, Photography, Editing</li>
+                        </ul>
                     </div>
                 </div>
             </aside>
@@ -229,6 +146,7 @@
                         </p>
                     </div>
                 </div>
+                
             </aside>
         </div>
     </section>
