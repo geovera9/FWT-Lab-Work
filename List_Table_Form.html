@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Information</title>
+</head>
+
+<body>
+    <hr>
+
+    <!-- MARKS -->
+ <h1>Student Marks</h1>
+    <table border="1" cellpadding="8">
+        <tr>
+            <td>Roll NO</td>
+            <td>Name</td>
+            <td>Subject</td>
+            <td>Marks</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Mahul</td>
+            <td>HTML</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Priya</td>
+            <td>HTML</td>
+            <td>67</td>
+        </tr>
+   	<tr>
+            <td>102</td>
+            <td>Rahul</td>
+            <td>HTML</td>
+            <td>96</td>
+        </tr>
+    </table>
+<hr>
+
+    <!-- FORM -->
+    <h2>Student Registration Form</h2>
+
+    <form id="stu_regi">
+
+        <label>Name:</label>
+        <input type="text" required ="name">
+        <br><br>
+
+        <label>Mobile number:</label>
+        <input type="number" required name="number" id="number">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" required name="email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" required name="password">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="optional"> Optional
+        <br><br>
+        
+
+        <label>Nationality: </label>
+        <input type="radio" name="nationality" value="Indian"> Indian
+        <input type="radio" name="nationality" value="NRI"> NRI
+        <input type="radio" name="nationality" value="Foreigner"> Foreigner
+        <br><br>
+
+
+
+        <label>Hobbies:</label>
+        <input type="checkbox" name="hobby" value="reading"> Reading
+        <input type="checkbox" name="hobby" value="music"> Music
+        <input type="checkbox" name="hobby" value="sports"> Sports
+        <input type="checkbox" name="hobby" value="photography"> Photography
+        <input type="checkbox" name="hobby" value="programming"> Programming
+        <br><br>
+
+        <label>Course:</label>
+        <select name="course">
+            <option>Btech Computer Science</option>
+            <option>BCA</option>
+            <option>BSc Computer Science</option>
+            <option>MCA</option>
+            <option>MSc Computer Science</option>
+        </select>
+        <br><br>
+
+        <label>Address:</label>
+        <br>
+        <textarea name="address" rows="4" cols="30"></textarea>
+        <br><br>
+
+        <label>Feedback:</label>
+        <br>
+        <textarea name="feedback" rows="2" cols="20"></textarea>
+        <br><br>
+
+        <input type="button" onclick="Register()" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+    
+<script>
+    const fs = require('fs');
+
+    function Register() {
+        console.log("Hello Check check")
+        alert("Submit Sussecfully");
+
+        const form = document.getElementById("stu_regi")
+        
+        const formData = new FormData(form)
+        const jsonObj = Object.fromEntries(formData.entries());
+        const data = JSON.stringify(jsonObj);
+
+        function downloadJSON(jsonString, filename) {
+        const blob = new Blob([jsonString], {type: 'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        a.click();
+        URL.revokeObjectURL(url);
+}
+
+
+
+
+        console.log(data);
+    }
+    
+</script>
+
+</body>
+
+</html>
