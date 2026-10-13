@@ -12,14 +12,14 @@
  <h1>Student Marks</h1>
     <table border="1" cellpadding="8">
         <tr>
-            <td>Roll NO</td>
-            <td>Name</td>
-            <td>Subject</td>
-            <td>Marks</td>
+            <th>Roll NO</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
         </tr>
         <tr>
-            <td>101</td>
-            <td>Mahul</td>
+            <td>100</td>
+            <td>Aniket</td>
             <td>HTML</td>
             <td>85</td>
         </tr>
@@ -106,39 +106,6 @@
         <input type="reset" value="Clear">
 
     </form>
+    </body>
 
-    
-<script>
-    const fs = require('fs');
-
-    function Register() {
-        console.log("Hello Check check")
-        alert("Submit Sussecfully");
-
-        const form = document.getElementById("stu_regi")
-        
-        const formData = new FormData(form)
-        const jsonObj = Object.fromEntries(formData.entries());
-        const data = JSON.stringify(jsonObj);
-
-        function downloadJSON(jsonString, filename) {
-        const blob = new Blob([jsonString], {type: 'application/json'});
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        a.click();
-        URL.revokeObjectURL(url);
-}
-
-
-
-
-        console.log(data);
-    }
-    
-</script>
-
-</body>
-
-</html>
+</html> 
