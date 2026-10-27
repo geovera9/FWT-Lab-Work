@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation and Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+
+
+        <!-- DOM Manipulation -->
+        <p id="welcome">Welcome to the registration page.</p>
+        <button type="button" onclick="changeMessage()">
+            Change Message
+        </button>
+        <hr>
+
+
+        <!-- Form -->
+        <form id="registrationForm">
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <label>Email:</label>
+            <input type="text" id="email" placeholder="Enter your email">
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <label>Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script>
+
+
+
+        // DOM Manipulation
+        function changeMessage() {
+            document.getElementById("welcome").textContent =
+                "The message was changed using JavaScript DOM manipulation.";
+            document.getElementById("welcome").style.color = "blue";
+        }
+
+
+
+        // Form Validation
+        document.getElementById("registrationForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+                
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let password = document.getElementById("password").value;
+                let age = document.getElementById("age").value;
+                let message = document.getElementById("message");
+
+                if (name === "") {
+                    message.textContent = "Please enter your name.";
+                    message.className = "error";
+                    return;
+                }
+                if (email === "" || !email.includes("@")) {
+                    message.textContent = "Please enter a valid email address.";
+                    message.className = "error";
+                    return;
+                }
+                if (password.length < 6) {
+                    message.textContent =
+                        "Password must contain at least 6 characters.";
+                    message.className = "error";
+                    return;
+                }
+                if (age === "" || age < 18) {
+                    message.textContent =
+                        "Age must be 18 or above.";
+                    message.className = "error";
+                    return;
+                }
+                message.textContent =
+                    "Form submitted successfully!";
+                message.className = "success";
+            });
+    </script>
+</body>
+
+</html>
